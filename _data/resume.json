@@ -1,0 +1,78 @@
+{
+    "name": "Stephen Klein",
+    "destination": "Mountain View, California",
+    "email": "Stephendklein08@gmail.com",
+    "workExperience": [
+        {
+            "title": "Technical Support",
+            "employer": "County of Santa Clara",
+            "logo": "",
+            "employementDate": "07/2019 - Present",
+            "projects": [
+                "Managed asset refresh project installing over 200 desktops, laptops, and mobile devices.",
+                "Designed a curriculum providing website content management systems training to ROV division managers.",
+                "Diagnoses and resolves client workstation and mobile device hardware for entire ROV department.",
+                "Operated alternate hours responding to requests throughout presidential election operations."
+            ]
+        },
+        {
+            "title": "Application Support Analyst",
+            "employer": "County of Santa Clara",
+            "logo": "",
+            "employementDate": "09/2018 - 05/2019",
+            "projects": [
+                "Learned administration tools and system processes to provide effective staff interactions.",
+                "Conducted unit tests and remedied problems transitioning ROV to Cisco Finesse.",
+                "Assigned tickets to appropriate TSS departments documenting all problems and responses.",
+                "Repaired workstation devices and peripheral equipment following county specifications.",
+                "Documented and maintained ROV hardware inventory and software licenses."
+            ]
+        },
+        {
+            "title": "CodeRev",
+            "employer": "CodeRev",
+            "logo": "",
+            "employementDate": "06/2018 - 08/2018",
+            "projects": [
+                "Taught web design fundamentals focusing on JavaScript, HTML, and CSS."
+            ]
+        },
+        {
+            "title": "Technology Services Technician",
+            "employer": "De Anza Community College",
+            "logo": "",
+            "employementDate": "04/2015 - 04/2017",
+            "projects": [
+                "Technical computer repair and troubleshooting",
+                "Configure and debug systems to include TCP/IP, security management, and other applications."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "California State University East Bay",
+            "gradDate": "Present - 2022",
+            "degree": "Computer Science, B.S."
+        },
+        {
+            "school": "De Anza Community College",
+            "gradDate": "2017 - 2019",
+            "degree": "AA Liberal Arts: Science, Math and Engineering Emphasis."
+        }
+    ],
+    "certificates": [
+        {
+            "name": "University of California, Berkeley",
+            "course": "Full Stack Web Development"
+        },
+        {
+            "name": "Udacity",
+            "course": "React Nano Degree"
+        },
+        {
+            "name": "Foothill Community College",
+            "course": "Emergency Medical Technician"
+        }
+    ]
+
+}

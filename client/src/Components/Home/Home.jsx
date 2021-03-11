@@ -1,33 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Container, Button } from 'react-bootstrap';
+import axios from 'axios';
 
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import CodeLayout from '../CodeDisplay/Layout/CodeLayout';
 
-const Home = () => {
-    return(
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{ width: '100%' }}>
-				<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="mr-auto">
-						<Nav.Link href="#features">Features</Nav.Link>
-						<Nav.Link href="#pricing">Pricing</Nav.Link>
-						<NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-						</NavDropdown>
-					</Nav>
-					<Nav>
-						<Nav.Link href="#deets">More deets</Nav.Link>
-						<Nav.Link eventKey={2} href="#memes">
-							Dank memes
-      </Nav.Link>
-					</Nav>
-				</Navbar.Collapse>
-			</Navbar>
-    )
+class HomePage extends Component {
+	state = {
+		Show_Styled_Content: false,
+		data: {}
+	}
+
+	async componentDidMount() {
+		try {
+			let data = await axios.get('http://localhost:8000/');
+			let resume_Data = data.data.info
+			console.log(resume_Data);
+			this.setState(prevState => ({
+				data: {...prevState.data, resume_Data}
+			}));
+			
+		} catch(error) {
+
+		}
+	}
+
+	render() {
+		return(
+			<Container>
+				<Button variant="primary" size="lg" block>{this.state.Show_Styled_Content ? 'Un-Style Content': 'Style Content'}</Button>
+				{/* Display code */}
+				<CodeLayout data={this.state.data}/>
+			</Container>
+		)
+	}
 }
 
-export default Home;
+export default HomePage;
